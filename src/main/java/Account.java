@@ -14,6 +14,10 @@ public class Account {
     }
 
     public void withdraw(int amount) {
-        balance -= amount;
+        if (amount > this.balance) {
+            throw new ArithmeticException("Insufficient funds. Balance is: " + this.balance);
+        } else {
+            balance -= amount;
+        }
     }
 }
