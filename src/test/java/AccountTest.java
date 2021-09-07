@@ -10,4 +10,12 @@ public class AccountTest {
         Integer result = account.getBalance();
         assertEquals(0, result);
     }
+
+    @Test
+    public void deposit () {
+        Account account = new Account();
+        account.deposit(100);
+        Integer result = account.getBalance();
+        assertEquals(100, result);
+    }
 }
