@@ -15,9 +15,11 @@ public class Transaction {
     public float getTransaction() {
         return this.transaction;
     }
+
     public float getBalance() {
         return this.balance;
     }
+
     public LocalDate getDate() {
         return this.date;
     }

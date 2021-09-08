@@ -1,19 +1,19 @@
 public class Account {
-    private Integer balance;
+    private float balance;
 
     public Account() {
         this.balance = 0;
     }
 
-    public Integer getBalance() {
+    public float getBalance() {
         return balance;
     }
 
-    public void deposit(int amount) {
+    public void deposit(float amount) {
         balance += amount;
     }
 
-    public void withdraw(int amount) {
+    public void withdraw(float amount) {
         if (amount > this.balance) {
             throw new ArithmeticException("Insufficient funds. Balance is: " + this.balance);
         } else {

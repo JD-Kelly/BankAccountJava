@@ -12,4 +12,11 @@ public class StatementTest {
         statement.recordTransaction(50, LocalDate.of(2021,1, 12), 50);
         assertNotNull(statement.getLogEntry(0));
     }
+    @Test
+    void testRecordTransactionSendsMultipleTransactionsToLog() {
+        statement.recordTransaction(50, LocalDate.of(2021,1, 12), 50);
+        statement.recordTransaction(50, LocalDate.of(2021,1, 12), 100);
+        statement.recordTransaction(50, LocalDate.of(2021,1, 12), 150);
+        assertNotNull(statement.getLogEntry(2));
+    }
 }

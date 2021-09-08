@@ -8,14 +8,14 @@ public class AccountTest {
 
     @Test
     void testBalance () {
-        Integer result = account.getBalance();
+        float result = account.getBalance();
         assertEquals(0, result);
     }
 
     @Test
     void testDeposit () {
         account.deposit(100);
-        Integer result = account.getBalance();
+        float result = account.getBalance();
         assertEquals(100, result);
     }
 
@@ -23,7 +23,7 @@ public class AccountTest {
     void testWithdraw() {
         account.deposit(100);
         account.withdraw(50);
-        Integer result = account.getBalance();
+        float result = account.getBalance();
         assertEquals(50, result);
     }
 
