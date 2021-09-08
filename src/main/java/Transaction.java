@@ -6,11 +6,12 @@ public class Transaction {
     private float balance;
     private LocalDate date;
 
-    public Transaction(float amountInit, float balanceInit, LocalDate dateInit) {
+    public Transaction(float amountInit, LocalDate dateInit, float balanceInit) {
         transaction = amountInit;
-        balance = balanceInit;
         date = dateInit;
+        balance = balanceInit;
     }
+
     public float getTransaction() {
         return this.transaction;
     }

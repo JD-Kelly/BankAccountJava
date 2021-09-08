@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TransactionTest {
     LocalDate date = LocalDate.of(2021, 01, 12);
-    Transaction transaction = new Transaction(50, 150, date);
+    Transaction transaction = new Transaction(50, date,150);
 
     @Test
     void testStoresTransactionAmount () {
