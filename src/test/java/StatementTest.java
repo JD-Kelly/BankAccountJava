@@ -9,14 +9,14 @@ public class StatementTest {
 
     @Test
     void testRecordTransactionSendsTransactionToLog() {
-        statement.recordTransaction(50, LocalDate.of(2021,1, 12), 50);
+        statement.recordTransaction(50, LocalDate.of(2021,1, 12));
         assertNotNull(statement.getLogEntry(0));
     }
     @Test
     void testRecordTransactionSendsMultipleTransactionsToLog() {
-        statement.recordTransaction(50, LocalDate.of(2021,1, 12), 50);
-        statement.recordTransaction(50, LocalDate.of(2021,1, 12), 100);
-        statement.recordTransaction(50, LocalDate.of(2021,1, 12), 150);
+        statement.recordTransaction(50, LocalDate.of(2021,1, 12));
+        statement.recordTransaction(50, LocalDate.of(2021,1, 12));
+        statement.recordTransaction(50, LocalDate.of(2021,1, 12));
         assertNotNull(statement.getLogEntry(2));
     }
 }

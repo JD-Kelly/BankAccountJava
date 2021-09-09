@@ -3,7 +3,7 @@ import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TransactionTest {
-    LocalDate date = LocalDate.of(2021, 01, 12);
+    LocalDate date = LocalDate.of(2021, 1, 12);
     Transaction transaction = new Transaction(50, date,150);
 
     @Test

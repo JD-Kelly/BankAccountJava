@@ -1,23 +1,22 @@
+import java.time.LocalDate;
+
 public class Account {
-    private float balance;
 
-    public Account() {
-        this.balance = 0;
+    Statement statement;
+
+    public Account(Statement injected) {
+        statement = injected;
     }
 
-    public float getBalance() {
-        return balance;
+    public void deposit(float amount, LocalDate Localdate) {
+        this.statement.recordTransaction(amount, Localdate);
     }
 
-    public void deposit(float amount) {
-        balance += amount;
-    }
-
-    public void withdraw(float amount) {
-        if (amount > this.balance) {
-            throw new ArithmeticException("Insufficient funds. Balance is: " + this.balance);
+    public void withdraw(float amount, LocalDate localDate) {
+        if (amount > statement.currentBalance()) {
+            throw new ArithmeticException("Insufficient funds. Balance is: " + statement.currentBalance());
         } else {
-            balance -= amount;
+            this.statement.recordTransaction(-amount, localDate);
         }
     }
 }
