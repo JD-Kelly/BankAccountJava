@@ -20,7 +20,5 @@ public class Transaction {
         return this.balance;
     }
 
-    public LocalDate getDate() {
-        return this.date;
-    }
+    public LocalDate getDate() { return this.date; }
 }

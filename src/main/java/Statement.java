@@ -8,9 +8,8 @@ public class Statement {
         Transaction transaction = new Transaction(amount, date, balance);
         this.log.add(transaction);
     }
-
     public Transaction getLogEntry(int index) {
         return this.log.get(index);
     }
-
+    public ArrayList<Transaction> getLog() { return this.log; }
 }
